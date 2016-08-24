@@ -6,21 +6,13 @@ function Main() {
   var playerGuess = parseInt(input.value);
 
   if (playerGuess > generatedNumber) {
-<<<<<<< HEAD
     output.value="Flying too high! You just guessed " +input.value;
   } else if (playerGuess < generatedNumber) {
       output.value = "Aiming too low... You just guessed " + input.value;
-=======
-    output.value="Flying too high!";
-  } else if (playerGuess < generatedNumber) {
-      output.value = "Aiming too low...";
->>>>>>> f6469074e03ceea3872c857011ccbb794ed7b873
     } else if (playerGuess == generatedNumber) {
       output.value = "Shazam! Great work.";
     }
 };
-
-<<<<<<< HEAD
 function ClearFields() {
     document.getElementById("input").value = "";
 }
@@ -35,10 +27,6 @@ function resetG() {
   //added to put function out of call stack
   return false;
 }
-
-=======
->>>>>>> f6469074e03ceea3872c857011ccbb794ed7b873
-
 
 // var guess = document.getElementById('#guessBox')
 // var submit = document.querySelector('.pickNumber');
@@ -56,40 +44,21 @@ function resetG() {
   // If no: display "too low" somewher *where?!)
 
 // get value from input field javascript
-
-<<<<<<< HEAD
 // submit.addEventListener ('click', function (){
-//
+
 //   parsInt(guess)
-//
 //   if (guess === randomNumber) "Shazam!";
-//
 //   else if (guess < randomNumber) "Aiming too low.";
-//
 //   else if (guess > randomNumber) "Flying too high"
 // });
-//
-//
-//
 // clearButton.addEventListener('click', function () {
 //   var guess = "";
 // });
-=======
-
-submit.addEventListener ('click', function (){
-
-  parsInt(input.value)
-
-  if (guess === randomNumber) "Shazam!";
-
-  else if (guess < randomNumber) "Aiming too low.";
-
-  else if (guess > randomNumber) "Flying too high"
-});
-
-
-
-clearButton.addEventListener('click', function () {
-  var guess = "";
-});
->>>>>>> f6469074e03ceea3872c857011ccbb794ed7b873
+// submit.addEventListener ('click', function (){
+//   parsInt(input.value)
+//   if (guess === randomNumber) "Shazam!";
+//   else if (guess < randomNumber) "Aiming too low.";
+//   else if (guess > randomNumber) "Flying too high"
+// });
+// clearButton.addEventListener('click', function () {
+//   var guess = "";

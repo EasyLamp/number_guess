@@ -1,0 +1,43 @@
+<<<<<<< HEAD
+html {
+  background: url(moon.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: white;
+}
+.pa {
+  width: 400px;
+}
+#input {
+=======
+#input, #output {
+>>>>>>> f6469074e03ceea3872c857011ccbb794ed7b873
+  width: 20%;
+}
+h1 {
+  font-size: 200%;
+  margin-top: 200px;
+  margin-bottom: 50px;
+}
+p {
+  margin-bottom: 50px;
+}
+<<<<<<< HEAD
+.clearInput {
+  margin-top: 20px;
+}
+#output {
+  height: 300px;
+  width: 400px;
+  font-style: italic;
+  background: none;
+  border: none;
+  color: red;
+  font-weight: bold;
+  font-size: 120%;
+  margin-left: 20px;
+}
+=======
+>>>>>>> f6469074e03ceea3872c857011ccbb794ed7b873

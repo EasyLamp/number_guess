@@ -5,6 +5,7 @@ html {
   -o-background-size: cover;
   background-size: cover;
   color: white;
+  margin-left: 10px;
 }
 .pa {
   width: 400px;

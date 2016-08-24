@@ -45,6 +45,11 @@ function numberGenerator() {
   return Math.floor(Math.random() * 100) + 1;
 }
 
+submit.addEventListener('click', function (){
+  main();
+  clearFields()
+});
+
 
 // var guess = document.getElementById('#guessBox')
 // var submit = document.querySelector('.pickNumber');
@@ -63,10 +68,6 @@ function numberGenerator() {
 
 // get value from input field javascript
 
-submit.addEventListener('click', function (){
-  main();
-  clearFields()
-});
 //   parsInt(guess)
 //   if (guess === randomNumber) "Shazam!";
 //   else if (guess < randomNumber) "Aiming too low.";

@@ -1,32 +1,50 @@
-var generatedNumber = Math.floor(Math.random()*100+1);
+var generatedNumber = numberGenerator();
+var submit = document.getElementById('playerButton');
+var output = document.getElementById('output');
+var input = document.getElementById('input');
 
-function Main() {
-  var input = document.getElementById('input');
-  var output = document.getElementById('output');
+function main() {
   var playerGuess = parseInt(input.value);
 
+
+  if (isNaN(playerGuess)){
+    return output.innerText = "You have not guessed a number.";
+  }
+  if (playerGuess > 100) {
+    return output.innerText = "Not an appropriate guess!!!"
+  }
+  if (playerGuess < 1) {
+    return output.innerText = "Not an appropriate guess!!!"
+  }
+
   if (playerGuess > generatedNumber) {
-    output.value="Flying too high! You just guessed " +input.value;
+    output.innerText ="Flying too high! You just guessed " +input.value;
   } else if (playerGuess < generatedNumber) {
-      output.value = "Aiming too low... You just guessed " + input.value;
-    } else if (playerGuess == generatedNumber) {
-      output.value = "Shazam! Great work.";
-    }
+    output.innerText = "Aiming too low... You just guessed " + input.value;
+  } else {
+    output.innerText = "Shazam! Great work.";
+  }
 };
-function ClearFields() {
-    document.getElementById("input").value = "";
+
+function clearFields() {
+  input.value = "";
 }
 
 function resetG() {
   //reset guess value
   input.value = "";
   //set randomNumber to be a new random number
-  generatedNumber = Math.floor(Math.random() * 100) + 1;
+  generatedNumber = numberGenerator();
   //update output text field
-  output.value="";
+  output.innerText="";
   //added to put function out of call stack
   return false;
 }
+
+function numberGenerator() {
+  return Math.floor(Math.random() * 100) + 1;
+}
+
 
 // var guess = document.getElementById('#guessBox')
 // var submit = document.querySelector('.pickNumber');
@@ -44,13 +62,15 @@ function resetG() {
   // If no: display "too low" somewher *where?!)
 
 // get value from input field javascript
-// submit.addEventListener ('click', function (){
 
+submit.addEventListener('click', function (){
+  main();
+  clearFields()
+});
 //   parsInt(guess)
 //   if (guess === randomNumber) "Shazam!";
 //   else if (guess < randomNumber) "Aiming too low.";
 //   else if (guess > randomNumber) "Flying too high"
-// });
 // clearButton.addEventListener('click', function () {
 //   var guess = "";
 // });
@@ -58,6 +78,7 @@ function resetG() {
 //   parsInt(input.value)
 //   if (guess === randomNumber) "Shazam!";
 //   else if (guess < randomNumber) "Aiming too low.";
+//
 //   else if (guess > randomNumber) "Flying too high"
 // });
 // clearButton.addEventListener('click', function () {

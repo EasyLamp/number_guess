@@ -5,7 +5,7 @@ html {
   -o-background-size: cover;
   background-size: cover;
   color: white;
-  margin-left: 10px;
+  margin-left: 20px;
 }
 .pa {
   width: 400px;
@@ -20,13 +20,14 @@ h1 {
 }
 p {
   margin-bottom: 50px;
+  margin-top: 50px;
 }
 .clearInput {
   margin-top: 20px;
 }
 #output {
-  height: 200px;
-  width: 400px;
+  height: 100px;
+  width: 200px;
   font-style: italic;
   background: none;
   border: none;

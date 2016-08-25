@@ -24,7 +24,7 @@ function main() {
   } else if (playerGuess < generatedNumber) {
     output.innerText = "Aiming too low... You just guessed " + input.value;
   } else {
-    output.innerText = "Shazam! Great work.";
+    output.innerText = "Shazam! Great work. Click Reset to play again.";
   }
 };
 

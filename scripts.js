@@ -2,6 +2,8 @@ var generatedNumber = numberGenerator();
 var submit = document.getElementById('playerButton');
 var output = document.getElementById('output');
 var input = document.getElementById('input');
+var clearInputButton = document.getElementById('clearInput')
+var grayResetButton = document.getElementById('resetButton')
 
 function main() {
   var playerGuess = parseInt(input.value);
@@ -11,10 +13,10 @@ function main() {
     return output.innerText = "You have not guessed a number.";
   }
   if (playerGuess > 100) {
-    return output.innerText = "Not an appropriate guess!!!"
+    return output.innerText = "Please guess within the range 1 - 100."
   }
   if (playerGuess < 1) {
-    return output.innerText = "Not an appropriate guess!!!"
+    return output.innerText = "Please guess within the range 1 - 100."
   }
 
   if (playerGuess > generatedNumber) {
@@ -28,7 +30,19 @@ function main() {
 
 function clearFields() {
   input.value = "";
+  clearInputButton.disabled = true;
 }
+
+input.addEventListener("keyup", function (){
+
+  if (input.value == ""){
+     clearInputButton.disabled = true;
+     grayResetButton.disabled = true;
+  } else {
+    clearInputButton.disabled = false;
+    grayResetButton.disabled = false;
+  }
+})
 
 function resetG() {
   //reset guess value
@@ -38,6 +52,8 @@ function resetG() {
   //update output text field
   output.innerText="";
   //added to put function out of call stack
+  clearInputButton.disabled = true;
+  grayResetButton.disabled = true;
   return false;
 }
 
@@ -47,40 +63,6 @@ function numberGenerator() {
 
 submit.addEventListener('click', function (){
   main();
-  clearFields()
+  clearFields();
+  grayResetButton.disabled = false;
 });
-
-
-// var guess = document.getElementById('#guessBox')
-// var submit = document.querySelector('.pickNumber');
-// var clearButton = document.querySelector('.clear');
-// var input = document.querySelector('#guessBox')
-// var number = 10
-
-// var randomNumber = Math.floor(Math.random() * 100) + 1;
-// When a user clicks on "Guess A Number"
-// get value from guessBox
-// I want to store that value in a variable
-// I already have a variable with a umber in it called var number
-// Is user guess bigger than var number?
-  // If yes : display "too high" somewhere on the page (where?!)
-  // If no: display "too low" somewher *where?!)
-
-// get value from input field javascript
-
-//   parsInt(guess)
-//   if (guess === randomNumber) "Shazam!";
-//   else if (guess < randomNumber) "Aiming too low.";
-//   else if (guess > randomNumber) "Flying too high"
-// clearButton.addEventListener('click', function () {
-//   var guess = "";
-// });
-// submit.addEventListener ('click', function (){
-//   parsInt(input.value)
-//   if (guess === randomNumber) "Shazam!";
-//   else if (guess < randomNumber) "Aiming too low.";
-//
-//   else if (guess > randomNumber) "Flying too high"
-// });
-// clearButton.addEventListener('click', function () {
-//   var guess = "";

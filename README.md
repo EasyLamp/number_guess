@@ -1,5 +1,7 @@
 # Number Guesser
 
+https://adam-rice.github.io/number_guess/
+
 An input field for guessing the number
 A button for submitting a guess
 A button for clearing the input field

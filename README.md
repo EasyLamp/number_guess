@@ -1,6 +1,6 @@
 # Number Guesser
 
-[Try it.](https://adam-rice.github.io/Number-Guesser/)
+[View the application.](https://adam-rice.github.io/Number-Guesser/)
 
 An input field for guessing the number.
 A button for submitting a guess.
